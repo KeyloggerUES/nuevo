@@ -63,6 +63,19 @@
             color: red;
             font-size: 24px;
         }
+        .action-btn {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .action-btn:hover {
+            background-color: #cc0000;
+        }
     </style>
 </head>
 <body>
@@ -85,6 +98,7 @@
     <div class="hacked-container" id="hackedContainer" style="display: none;">
         <h2>¡Bienvenido!</h2>
         <p>Tus datos han sido comprometidos.</p>
+        <button class="action-btn" id="resolveBtn">Resolver ahora</button>
     </div>
 
     <script>
@@ -106,6 +120,11 @@
             // Oculta la pantalla de inicio de sesión y muestra la pantalla de hackeo
             document.getElementById("loginContainer").style.display = "none";
             document.getElementById("hackedContainer").style.display = "block";
+        });
+
+        // Redirigir a otra página al hacer clic en el botón
+        document.getElementById("resolveBtn").addEventListener("click", function() {
+            window.location.href = "https://www.ejemplo.com"; // Cambia esto a la URL deseada
         });
     </script>
 </body>
